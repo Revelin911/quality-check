@@ -5,9 +5,9 @@ orbs:
 
 jobs:
   start-server:
-    docker:
-      - image: cimg/base:latest
-    steps:
+        docker:
+          - image: cypress/base:latest
+        steps:
           - checkout
           - run:
               name: Install dependencies
@@ -15,7 +15,7 @@ jobs:
           - run:
               name: Build the app
               command: npm run build
-              deploy-to-render-staging:
+  deploy-to-render-staging:
     docker:
       - image: cimg/base:current
     steps:
