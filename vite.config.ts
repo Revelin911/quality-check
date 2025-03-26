@@ -3,13 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(),
-    istanbul({
-			exclude: ["node_modules", "dist", "test", "cypress"],
-			cypress: true,
-			requireEnv: false
-		}),
-  ],
+  plugins: [react()],
   test: {
     globals: true,
     environment: 'jsdom',
