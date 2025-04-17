@@ -1,5 +1,8 @@
 name: Deploy
 
+env:
+  DEPLOY_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+
 on:
     pull_request:
       types: 
@@ -11,8 +14,5 @@ jobs:
     ci:
       steps: 
         - name: Deploy
-          if: github.ref == 'refs/heads/main'
-          env:
-            DEPLOY_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
           run: |
             curl "$DEPLOY_URL"
