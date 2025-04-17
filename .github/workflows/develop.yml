@@ -24,8 +24,11 @@ jobs:
         with:
           node-version: 21.x
 
-      - name: Start server
-        run: npm run start
+      - name: Install dependencies
+        run: npm i
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
+        with: 
+          build: npm run build
+          start: npm run start
