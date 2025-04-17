@@ -1,14 +1,14 @@
-# Name of workflow
+# # Name of workflow
 name: Cypress Tests
 
-# Trigger workflow on all pull requests
+# # Trigger workflow on all pull requests
 on:
   pull_request:
     branches:
       - develop
       - staging
 
-# Jobs to carry out
+# # Jobs to carry out
 jobs:
   cypress:
     # Operating system to run job on
@@ -24,14 +24,12 @@ jobs:
         with:
           node-version: 21.x
 
-      # Install dependencies
-      - name: 🧰 Install Deps
-        run: npm install
-        
-      # Run Cypress
-      - name: Run Cypress tests
-        run: npm run test
+      - name: Install dependencies
+        run: npm i
 
-      # Run build
-      - name: Run Build
-        run: npm run build
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with: 
+          build: npm run build
+          start: npm run start
+          component: true
