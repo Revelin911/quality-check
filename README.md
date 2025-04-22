@@ -21,9 +21,11 @@ In order for this project to work properly, you will need to download the librar
   
 ## Credits
 
-Cypress Install - (https://docs.cypress.io/app/tooling/code-coverage)
+![Cypress Install](https://docs.cypress.io/app/tooling/code-coverage)
 
-Github Actions - (https://docs.github.com/en/actions/writing-workflows/quickstart)
+![Istanbul Install](https://www.npmjs.com/package/vite-plugin-istanbul)
+
+![NYC Install](https://github.com/istanbuljs/nyc)
 
 ## License
 
@@ -51,8 +53,4 @@ SOFTWARE.
 
 ## Tests
  
-Render Link - (https://quality-check.onrender.com)
-
-![Cypress Testing](./assets/images/cypress.png)
-
-![Deplyment Testing](./assets/images/deploy.png)
+![Render Link](https://quality-check.onrender.com)
