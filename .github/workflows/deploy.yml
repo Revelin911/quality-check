@@ -12,17 +12,8 @@ on:
        
 jobs:
     ci:
-      name: Deploy to Render
       runs-on: ubuntu-latest
       steps: 
-        - name: Checkout Code
-          uses: actions/checkout@v1
-
-          name: Install dependencies
-          run: npm install
-          
-          name: Deply
-          if: github.ref == 'refs/heads/main'
-          
+        - name: Deploy
           run: |
             curl "$DEPLOY_URL"
